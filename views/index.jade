@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  if errors 
+    each err in errors
+      p= err
+  a(href='/login') Login
+  h1 Sign Up
+  form(action='/index' method='post')
+    label Email
+    p
+      input(type='email' name='email')
+      p
+    label Password
+    p
+      input(type='password' name='pass')
+      p
+    label Password Confirmation
+    p
+      input(type='password' name='confirm')
+      p
+    input(type='submit' value='Sign Up')
+      
+      
